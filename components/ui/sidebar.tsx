@@ -164,10 +164,13 @@ export const SidebarLink = ({
     className?: string;
     props?: LinkProps;
 }) => {
-    const { open, animate } = useSidebar();
+    const { open, animate, setOpen } = useSidebar();
     return (
         <div
-            onClick={link.onClick}
+            onClick={() => {
+                link.onClick?.();
+                setOpen(false); // Close sidebar on mobile
+            }}
             className={cn(
                 "flex items-center justify-start gap-2  group/sidebar py-2 cursor-pointer",
                 className
@@ -175,7 +178,6 @@ export const SidebarLink = ({
             {...props}
         >
             {link.icon}
-
             <motion.span
                 animate={{
                     display: animate ? (open ? "inline-block" : "none") : "inline-block",

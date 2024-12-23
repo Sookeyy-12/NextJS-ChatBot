@@ -17,7 +17,10 @@ export function NavPage({ ChatApp , Profile }: { ChatApp: React.FC, Profile: Rea
         {
             label: "Chat",
             href: "#",
-            onClick: () => setActiveComponent(<ChatApp />),
+            onClick: () => {
+                setActiveComponent(<ChatApp />);
+                setOpen(false); // Close sidebar on mobile
+            },
             icon: (
                 <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
@@ -25,7 +28,10 @@ export function NavPage({ ChatApp , Profile }: { ChatApp: React.FC, Profile: Rea
         {   
             label: "About the Developer",
             href: "#",
-            onClick: () => setActiveComponent(<Profile />),
+            onClick: () => {
+                setActiveComponent(<Profile />);
+                setOpen(false); // Close sidebar on mobile
+            },
             icon: (
                 <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
