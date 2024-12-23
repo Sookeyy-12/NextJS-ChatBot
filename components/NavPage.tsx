@@ -59,7 +59,7 @@ export function NavPage({ ChatApp , Profile }: { ChatApp: React.FC, Profile: Rea
                         <SidebarLink
                             link={{
                                 label: "Made with ❤️ by Sookeyy",
-                                href: "#",
+                                href: "https://github.com/Sookeyy-12/NextJS-ChatBot",
                                 icon: (
                                     <Image
                                         src="/github-mark-white.png"

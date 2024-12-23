@@ -1,3 +1,9 @@
+# Gemini Powered ChatBot made in NextJS
+
+### Chat with Gemini, a chatbot powered by NextJS and ReactJS, ask it to browse the web or ask it to tell you a joke. this is a chatbot that can do a lot of things, and it's all powered by NextJS.
+
+<hr>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

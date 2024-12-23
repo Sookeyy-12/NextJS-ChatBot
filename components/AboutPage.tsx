@@ -5,7 +5,7 @@ type Props = {}
 
 function AboutPage({ }: Props) {
     return (
-        <div className='flex justify-center items-center flex-col text-white'>
+        <div className='flex justify-center items-center flex-col h-full text-white'>
             <div className='text-2xl'>
                 Hey There!
             </div>
