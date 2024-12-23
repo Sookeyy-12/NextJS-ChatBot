@@ -1,9 +1,6 @@
-import React from 'react'
-import { TextGenerateEffect } from './ui/text-generate-effect';
+import React from 'react';
 
-type Props = {}
-
-function AboutPage({ }: Props) {
+function AboutPage() {
     return (
         <div className='flex justify-center items-center flex-col h-full text-white'>
             <div className='text-2xl'>

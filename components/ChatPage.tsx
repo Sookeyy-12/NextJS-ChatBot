@@ -6,9 +6,8 @@ import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-type Props = {}
 
-function ChatPage({ }: Props) {
+function ChatPage() {
     const { messages, input, handleInputChange, handleSubmit } = useChat({
         maxSteps: 5,
     });
@@ -24,20 +23,6 @@ function ChatPage({ }: Props) {
     useEffect(() => {
         scrollToBottom();
     }, [messages]);
-
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            handleSubmit(event as unknown as React.FormEvent<HTMLFormElement>);
-        }
-    };
-
-    const handleInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        handleInputChange(event);
-        const target = event.target;
-        target.style.height = 'auto';
-        target.style.height = `${Math.min(target.scrollHeight, 200)}px`;
-    };
 
     return (
         <div className='flex justify-center  h-full w-full overflow-scroll mb-5'>
@@ -63,7 +48,7 @@ function ChatPage({ }: Props) {
                                 <div className={`chat-bubble ${m.role === 'user' ? 'bg-[#262626]' : 'bg-[#393939]'}`}>
                                     <ReactMarkdown
                                         components={{
-                                            code({ node, inline, className, children, ...props }) {
+                                            code({ inline, className, children, ...props }) {
                                                 const match = /language-(\w+)/.exec(className || "");
                                                 return !inline && match ? (
                                                     <SyntaxHighlighter
