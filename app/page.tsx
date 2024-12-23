@@ -7,6 +7,7 @@ export default function Chat() {
     const { messages, input, handleInputChange, handleSubmit } = useChat({
         maxSteps: 5,
     });
+
     return (
         <div className="chat flex flex-col w-full max-w-screen-sm py-24 mx-auto stretch bg-black">
             {messages.map(m => (
@@ -21,14 +22,14 @@ export default function Chat() {
                             </div>
                         </>
                     ) : (
-                    <>
-                        <div className='chat-header'>
-                            {m.role === 'user' ? 'User' : 'AI'}
-                        </div>
-                        <div className={`chat-bubble ${m.role === 'user' ? 'bg-slate-800' : 'bg-slate-900'}`}>
-                            <ReactMarkdown>{m.content}</ReactMarkdown>
-                        </div>
-                    </>
+                        <>
+                            <div className='chat-header'>
+                                {m.role === 'user' ? 'User' : 'AI'}
+                            </div>
+                            <div className={`chat-bubble ${m.role === 'user' ? 'bg-slate-800' : 'bg-slate-900'}`}>
+                                <ReactMarkdown>{m.content}</ReactMarkdown>
+                            </div>
+                        </>
                     )}
                 </div>
             ))}

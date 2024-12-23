@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ai-sdk/google": "^1.0.12",
+    "@google/generative-ai": "^0.21.0",
     "ai": "^4.0.22",
     "daisyui": "^4.12.22",
     "next": "15.1.2",
