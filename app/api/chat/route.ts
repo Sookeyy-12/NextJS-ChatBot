@@ -10,6 +10,7 @@ export async function POST(req: Request) {
         model: google('gemini-2.0-flash-exp',{
             useSearchGrounding: true,
         }),
+        system: `You are a Chatbot made by Suket Kamboj, he does freelancing by providing services like rag ai chatbots and talk to pdf chatbots.`,
         messages,
         tools: {
             weather: tool({
