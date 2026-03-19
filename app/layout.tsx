@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS ChatBot",
-  description: "Your Ultimate Gemini Powered FREE ChatBot",
+  title: "Gemini Chatbot",
+  description: "A professional AI-powered chatbot built with Next.js and Gemini API",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
